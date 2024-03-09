@@ -1,0 +1,276 @@
+:root {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vw;
+    display: grid;
+    grid-template: 150px 1fr / 200px 1fr;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1ch;
+}
+
+/* ************************************************************************ */
+/* *****************************Sidebar elements*************************** */
+/* ************************************************************************ */
+
+.sidebar {
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    grid-area: sidebar;
+    background-color: #0099e6;
+    color: white;
+}
+
+/* *****************************Logo**************************************** */
+
+.logo {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    padding: 5px;
+    min-height: 25px;
+    gap: 10px;
+    margin: 5px;
+}
+
+.logo-boxes {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    grid-template-areas:
+        "logo1 logo2"
+        "logo1 logo4"
+        "logo3 logo4";
+    gap: 2px;
+    padding: 3px;
+}
+
+.logo1 {
+    grid-area: logo1;
+}
+
+.logo2 {
+    grid-area: logo2;
+}
+
+.logo3 {
+    grid-area: logo3;
+}
+
+.logo4 {
+    grid-area: logo4;
+}
+
+.logo-boxes div {
+    background-color: white;
+}
+
+.logo-text {
+    align-self: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* *****************************Nav**************************************** */
+
+.nav > ul {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-auto-flow: column;
+    gap: 5px;
+    margin: 0px;
+    padding: 20px;
+    list-style: none;
+}
+
+.nav > ul > li > img {
+    width: 15px;
+    height: 15px;
+}
+
+/* *****************************Settings*********************************** */
+
+.settings ul {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: column;
+    gap: 5px;
+    margin: 0px;
+    padding: 20px;
+    list-style: none;
+}
+
+.settings > ul > li > img {
+    width: 20px;
+    height: 20px;
+}
+
+/* ************************************************************************ */
+/* *****************************Header elements**************************** */
+/* ************************************************************************ */
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template: 1fr 2fr / 2fr 1fr;
+    align-items: center;
+    margin: 0px 50px;
+}
+
+/* *****************************Search elements**************************** */
+
+.search {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+}
+
+.search > input {
+    background-color: lightgray;
+    border-style: none;
+    border-radius: 9999px;
+}
+
+.search > img {
+    width: 20px;
+    height: 2.5ch;
+}
+
+/* *****************************Notification elements**************************** */
+
+.notif {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: end;
+    gap: 20px;
+    align-items: center;
+}
+
+.bell {
+    width: 20px;
+    height: 20px;
+}
+
+.pp {
+    border-radius: 9999px;
+    width: 30px;
+    height: 30px;
+}
+
+.main-pp {
+    border-radius: 9999px;
+    width: 60px;
+    height: 60px;
+}
+
+/* *****************************Welcome elements**************************** */
+
+.welcome {
+    display: grid;
+    grid-template-areas:
+        "main-pp welcome"
+        "main-pp name";
+    justify-content: start;
+    column-gap: 20px;
+    align-content: center;
+}
+
+.welcome > img {
+    grid-area: main-pp;
+}
+
+.welcome > p {
+    grid-area: welcome;
+    margin: 0px;
+    padding: 0px;
+}
+
+.welcome > h3 {
+    grid-area: name;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* *****************************File Button elements**************************** */
+
+.file-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    gap: 20px;
+    justify-content: end;
+}
+
+.file-buttons > button {
+    background-color: #0099e6;
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    padding: 8px 20px;
+}
+
+/* ************************************************************************ */
+/* *****************************Main content elements********************** */
+/* ************************************************************************ */
+
+.main {
+    grid-area: main;
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+        "projects-heading announcements-heading"
+        "projects announcements"
+        "projects trending";
+    align-content: start;
+}
+
+/* *****************************Projects elements********************** */
+
+.projects-heading {
+    grid-area: projects-heading;
+}
+
+.projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 10px;
+}
+
+.project{
+    background-color: white;
+    height: min-content;
+    padding: 25px;
+    border-radius: 5px;
+    border-left: 5px solid #e6b800;
+}
+
+.project > h4 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.project > p {
+    font-size: 10px;
+}
+
+/* *****************************Announcements elements********************** */
+
+.announcements-heading {
+    grid-area: announcements-heading;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+/* *****************************Trending elements********************** */
+
+.trending {
+    grid-area: trending;
+}
