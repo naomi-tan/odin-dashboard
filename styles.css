@@ -4,7 +4,6 @@
 
 .container {
     width: 100vw;
-    height: 100vw;
     display: grid;
     grid-template: 150px 1fr / 200px 1fr;
     grid-template-areas:
@@ -298,4 +297,20 @@ hr .solid {
     grid-area: trending;
     background-color: white;
     border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    padding: 30px;
+    row-gap: 20px;
+}
+
+.trending h6 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.trending p {
+    margin: 0px;
+    padding: 0px;
+    font-size: 10px;
 }
