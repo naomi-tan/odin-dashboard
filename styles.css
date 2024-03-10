@@ -224,8 +224,11 @@
     grid-template-areas: 
         "projects-heading announcements-heading"
         "projects announcements"
+        "projects trending-heading"
         "projects trending";
     align-content: start;
+    column-gap: 20px;
+    padding: 20px;
 }
 
 /* *****************************Projects elements********************** */
@@ -248,6 +251,7 @@
     padding: 25px;
     border-radius: 5px;
     border-left: 5px solid #e6b800;
+    box-shadow: 2px 2px 5px grey;
 }
 
 .project > h4 {
@@ -267,10 +271,31 @@
 
 .announcements {
     grid-area: announcements;
+    background-color: white;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.announcements > h5 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.announcements > p {
+    font-size: 10px;
+}
+
+hr .solid {
+    border-top: 1px solid;
 }
 
 /* *****************************Trending elements********************** */
 
+.trending-heading {
+    grid-area: trending-heading;
+}
 .trending {
     grid-area: trending;
+    background-color: white;
+    border-radius: 5px;
 }
