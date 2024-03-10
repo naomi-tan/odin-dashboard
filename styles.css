@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: cactron;
+    src: url(fonts/cactron/Cactron-Regular.otf);
+}
+
 .container {
     width: 100vw;
     display: grid;
@@ -10,7 +15,8 @@
         "sidebar header"
         "sidebar main";
     font-family:Arial, Helvetica, sans-serif;
-    letter-spacing: 0.1ch;
+    letter-spacing: 0.2ch;
+    font-family: cactron, sans-serif;
 }
 
 /* ************************************************************************ */
@@ -156,8 +162,8 @@
 
 .pp {
     border-radius: 9999px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .main-pp {
@@ -209,6 +215,7 @@
     border: none;
     border-radius: 9999px;
     padding: 8px 20px;
+    font-family: cactron, sans-serif;
 }
 
 /* ************************************************************************ */
@@ -242,6 +249,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     margin: 10px;
+    align-content: start;
 }
 
 .project{
@@ -260,6 +268,18 @@
 
 .project > p {
     font-size: 10px;
+}
+
+.icons {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    gap: 20px;
+    justify-content: right;
+}
+
+.icons > img {
+    width: 20px;
+    height: 20px;
 }
 
 /* *****************************Announcements elements********************** */
